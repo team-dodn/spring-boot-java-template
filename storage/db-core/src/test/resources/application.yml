@@ -1,0 +1,6 @@
+spring.application.name: db-core-test
+
+spring:
+  config:
+    import:
+      - db-core.yml

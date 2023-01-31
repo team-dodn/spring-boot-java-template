@@ -1,0 +1,23 @@
+spring.profiles.active: local
+spring.cloud.config.name: ${spring.application.name}
+
+
+---
+spring.config.activate.on-profile: local
+spring.cloud.config.enabled: false
+
+
+---
+spring.config.activate.on-profile:
+  - local-dev
+  - dev
+
+spring.cloud.config.uri: http://dev.your-cloud-config.com
+
+
+---
+spring.config.activate.on-profile:
+  - staging
+  - live
+
+spring.cloud.config.uri: http://live.your-cloud-config.com

@@ -1,0 +1,14 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'com.diffplug.spotless'
+
+    dependencies {
+        compileOnly "com.google.code.findbugs:jsr305:${spotlessFindbugsVersion}"
+    }
+
+    spotless {
+        java {
+            googleJavaFormat().aosp()
+        }
+    }
+}

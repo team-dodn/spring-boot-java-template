@@ -1,0 +1,6 @@
+spring.application.name: client-example-test
+
+spring:
+  config:
+    import:
+      - client-example.yml
