@@ -5,10 +5,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 import io.dodn.springboot.storage.db.CoreDbContextTest;
 import org.junit.jupiter.api.Test;
 
-public class ExampleRepositoryDT extends CoreDbContextTest {
+public class ExampleRepositoryIT extends CoreDbContextTest {
     private final ExampleRepository exampleRepository;
 
-    public ExampleRepositoryDT(ExampleRepository exampleRepository) {
+    public ExampleRepositoryIT(ExampleRepository exampleRepository) {
         this.exampleRepository = exampleRepository;
     }
 
