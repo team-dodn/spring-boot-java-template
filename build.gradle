@@ -37,7 +37,7 @@ subprojects {
     bootJar.enabled = false
     jar.enabled = true
 
-    tasks.named('test') {
+    test {
         useJUnitPlatform {
             excludeTags('develop', 'restdocs')
         }
