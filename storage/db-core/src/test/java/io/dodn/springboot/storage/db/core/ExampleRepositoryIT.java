@@ -3,6 +3,7 @@ package io.dodn.springboot.storage.db.core;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import io.dodn.springboot.storage.db.CoreDbContextTest;
+
 import org.junit.jupiter.api.Test;
 
 public class ExampleRepositoryIT extends CoreDbContextTest {
