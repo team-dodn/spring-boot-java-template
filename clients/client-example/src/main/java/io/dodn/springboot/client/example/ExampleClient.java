@@ -1,6 +1,7 @@
 package io.dodn.springboot.client.example;
 
 import io.dodn.springboot.client.example.model.ExampleClientResult;
+
 import org.springframework.stereotype.Component;
 
 @Component

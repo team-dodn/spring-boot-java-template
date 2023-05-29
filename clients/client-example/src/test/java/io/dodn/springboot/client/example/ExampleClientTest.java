@@ -3,7 +3,9 @@ package io.dodn.springboot.client.example;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import feign.RetryableException;
+
 import io.dodn.springboot.client.ClientExampleContextTest;
+
 import org.junit.jupiter.api.Test;
 
 public class ExampleClientTest extends ClientExampleContextTest {
