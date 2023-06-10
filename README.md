@@ -63,7 +63,7 @@ This module supports monitoring of services.
 Submodules of this module are responsible for the convenience of writing test codes.
 
 ### tests:api-docs
-This module is for writing spring-rest-dcos conveniently.
+This module is for writing spring-rest-docs conveniently.
 
 <br/>
 
@@ -96,7 +96,7 @@ This profile exists for deploying Live environments.
 # Test Tasks & Tags
 
 ## test
-This is a collection of test-taks that we want to run on `CI`.
+This is a collection of test-tasks that we want to run on `CI`.
 
 If you want to change the settings, modify the `build.gradle` file.
 
@@ -125,7 +125,7 @@ This setting makes run `lint` on every commit.
 $ git config core.hookspath .githooks
 ```
 
-## Intellij IDEA
+## IntelliJ IDEA
 This setting makes it easier to run the `test code` out of the box.
 
 ```
