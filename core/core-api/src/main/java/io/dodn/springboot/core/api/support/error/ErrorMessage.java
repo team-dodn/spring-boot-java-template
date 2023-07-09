@@ -1,8 +1,11 @@
 package io.dodn.springboot.core.api.support.error;
 
 public class ErrorMessage {
+
     private final String code;
+
     private final String message;
+
     private final Object data;
 
     public ErrorMessage(ErrorType errorType) {
@@ -28,4 +31,5 @@ public class ErrorMessage {
     public Object getData() {
         return data;
     }
+
 }

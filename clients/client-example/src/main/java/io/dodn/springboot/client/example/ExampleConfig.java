@@ -5,4 +5,6 @@ import org.springframework.context.annotation.Configuration;
 
 @EnableFeignClients
 @Configuration
-class ExampleConfig {}
+class ExampleConfig {
+
+}

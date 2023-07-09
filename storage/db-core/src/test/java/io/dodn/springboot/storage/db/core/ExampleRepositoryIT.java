@@ -7,6 +7,7 @@ import io.dodn.springboot.storage.db.CoreDbContextTest;
 import org.junit.jupiter.api.Test;
 
 public class ExampleRepositoryIT extends CoreDbContextTest {
+
     private final ExampleRepository exampleRepository;
 
     public ExampleRepositoryIT(ExampleRepository exampleRepository) {
@@ -21,4 +22,5 @@ public class ExampleRepositoryIT extends CoreDbContextTest {
         ExampleEntity found = exampleRepository.findById(saved.getId()).get();
         assertThat(found.getExampleColumn()).isEqualTo("SPRING_BOOT");
     }
+
 }

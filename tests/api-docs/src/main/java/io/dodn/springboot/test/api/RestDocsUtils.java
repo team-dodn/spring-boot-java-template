@@ -5,6 +5,7 @@ import org.springframework.restdocs.operation.preprocess.OperationResponsePrepro
 import org.springframework.restdocs.operation.preprocess.Preprocessors;
 
 public class RestDocsUtils {
+
     public static OperationRequestPreprocessor requestPreprocessor() {
         return Preprocessors.preprocessRequest(
                 Preprocessors.modifyUris().scheme("http").host("dev.dodn.io").removePort(),
@@ -14,4 +15,5 @@ public class RestDocsUtils {
     public static OperationResponsePreprocessor responsePreprocessor() {
         return Preprocessors.preprocessResponse(Preprocessors.prettyPrint());
     }
+
 }

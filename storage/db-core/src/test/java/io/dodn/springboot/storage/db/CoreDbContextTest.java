@@ -9,4 +9,6 @@ import org.springframework.test.context.TestConstructor;
 @Tag("context")
 @SpringBootTest
 @TestConstructor(autowireMode = TestConstructor.AutowireMode.ALL)
-public abstract class CoreDbContextTest {}
+public abstract class CoreDbContextTest {
+
+}

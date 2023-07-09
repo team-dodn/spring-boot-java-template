@@ -1,3 +1,4 @@
 package io.dodn.springboot.core.api.domain;
 
-public record ExampleData(String value, String param) {}
+public record ExampleData(String value, String param) {
+}

@@ -9,6 +9,7 @@ import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
 import java.lang.reflect.Method;
 
 public class AsyncExceptionHandler implements AsyncUncaughtExceptionHandler {
+
     private final Logger log = LoggerFactory.getLogger(getClass());
 
     @Override
@@ -19,8 +20,10 @@ public class AsyncExceptionHandler implements AsyncUncaughtExceptionHandler {
                 case WARN -> log.warn("CoreApiException : {}", e.getMessage(), e);
                 default -> log.info("CoreApiException : {}", e.getMessage(), e);
             }
-        } else {
+        }
+        else {
             log.error("Exception : {}", e.getMessage(), e);
         }
     }
+
 }

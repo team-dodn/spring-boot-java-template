@@ -4,8 +4,11 @@ import io.dodn.springboot.core.api.support.error.ErrorMessage;
 import io.dodn.springboot.core.api.support.error.ErrorType;
 
 public class ApiResponse<S> {
+
     private final ResultType result;
+
     private final S data;
+
     private final ErrorMessage error;
 
     private ApiResponse(ResultType result, S data, ErrorMessage error) {
@@ -41,4 +44,5 @@ public class ApiResponse<S> {
     public ErrorMessage getError() {
         return error;
     }
+
 }

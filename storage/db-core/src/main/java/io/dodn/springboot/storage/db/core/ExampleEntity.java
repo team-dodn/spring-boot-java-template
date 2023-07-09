@@ -5,9 +5,12 @@ import jakarta.persistence.Entity;
 
 @Entity
 public class ExampleEntity extends BaseEntity {
-    @Column private String exampleColumn;
 
-    public ExampleEntity() {}
+    @Column
+    private String exampleColumn;
+
+    public ExampleEntity() {
+    }
 
     public ExampleEntity(String exampleColumn) {
         this.exampleColumn = exampleColumn;
@@ -16,4 +19,5 @@ public class ExampleEntity extends BaseEntity {
     public String getExampleColumn() {
         return exampleColumn;
     }
+
 }

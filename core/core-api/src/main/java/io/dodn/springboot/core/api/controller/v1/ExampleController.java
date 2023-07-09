@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ExampleController {
+
     private final ExampleService exampleExampleService;
 
     public ExampleController(ExampleService exampleExampleService) {
@@ -23,10 +24,9 @@ public class ExampleController {
     }
 
     @GetMapping("/get/{exampleValue}")
-    public ApiResponse<ExampleResponseDto> exampleGet(
-            @PathVariable String exampleValue, @RequestParam String exampleParam) {
-        ExampleResult result =
-                exampleExampleService.processExample(new ExampleData(exampleValue, exampleParam));
+    public ApiResponse<ExampleResponseDto> exampleGet(@PathVariable String exampleValue,
+            @RequestParam String exampleParam) {
+        ExampleResult result = exampleExampleService.processExample(new ExampleData(exampleValue, exampleParam));
         return ApiResponse.success(new ExampleResponseDto(result.data()));
     }
 
@@ -35,4 +35,5 @@ public class ExampleController {
         ExampleResult result = exampleExampleService.processExample(request.toExampleData());
         return ApiResponse.success(new ExampleResponseDto(result.data()));
     }
+
 }

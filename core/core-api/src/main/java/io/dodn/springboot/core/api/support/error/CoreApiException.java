@@ -1,7 +1,9 @@
 package io.dodn.springboot.core.api.support.error;
 
 public class CoreApiException extends RuntimeException {
+
     private final ErrorType errorType;
+
     private final Object data;
 
     public CoreApiException(ErrorType errorType, Object data) {
@@ -17,4 +19,5 @@ public class CoreApiException extends RuntimeException {
     public Object getData() {
         return data;
     }
+
 }

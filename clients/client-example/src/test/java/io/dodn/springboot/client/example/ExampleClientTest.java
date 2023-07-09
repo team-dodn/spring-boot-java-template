@@ -9,6 +9,7 @@ import io.dodn.springboot.client.ClientExampleContextTest;
 import org.junit.jupiter.api.Test;
 
 public class ExampleClientTest extends ClientExampleContextTest {
+
     private final ExampleClient exampleClient;
 
     public ExampleClientTest(ExampleClient exampleClient) {
@@ -19,8 +20,10 @@ public class ExampleClientTest extends ClientExampleContextTest {
     public void shouldBeThrownExceptionWhenExample() {
         try {
             exampleClient.example("HELLO!");
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             assertThat(e).isExactlyInstanceOf(RetryableException.class);
         }
     }
+
 }

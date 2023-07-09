@@ -13,13 +13,18 @@ import java.time.LocalDateTime;
 
 @MappedSuperclass
 public abstract class BaseEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @CreationTimestamp @Column private LocalDateTime createdAt;
+    @CreationTimestamp
+    @Column
+    private LocalDateTime createdAt;
 
-    @UpdateTimestamp @Column private LocalDateTime updatedAt;
+    @UpdateTimestamp
+    @Column
+    private LocalDateTime updatedAt;
 
     public Long getId() {
         return id;
@@ -32,4 +37,5 @@ public abstract class BaseEntity {
     public LocalDateTime getUpdatedAt() {
         return updatedAt;
     }
+
 }
