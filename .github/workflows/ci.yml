@@ -23,7 +23,7 @@ jobs:
       - name: Lint
         uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
         with:
-          arguments: spotlessCheck
+          arguments: checkFormat
       - name: Test
         uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
         with:
