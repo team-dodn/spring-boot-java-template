@@ -1,14 +1,8 @@
 subprojects {
     apply plugin: 'java'
-    apply plugin: 'com.diffplug.spotless'
+    apply plugin: 'io.spring.javaformat'
 
     dependencies {
-        compileOnly "com.google.code.findbugs:jsr305:${spotlessFindbugsVersion}"
-    }
-
-    spotless {
-        java {
-            googleJavaFormat().aosp()
-        }
+        compileOnly "io.spring.javaformat:spring-javaformat-gradle-plugin:${springJavaFormatVersion}"
     }
 }

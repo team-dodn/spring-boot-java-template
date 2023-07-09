@@ -130,6 +130,10 @@ This setting makes it easier to run the `test code` out of the box.
 Build, Execution, Deployment > Build Tools > Gradle > Run tests using > IntelliJ IDEA	
 ```
 
+If you want to apply lint settings to the format of IDEA, please refer to the guide below.
+
+[Spring Java Format IntelliJ IDEA](https://github.com/spring-io/spring-javaformat#intellij-idea)
+
 ---
 
 # Supported By
