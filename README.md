@@ -46,9 +46,6 @@ This module shows an example of connecting to `MySql` using `Spring-Data-JPA`.
 ## Support
 Submodules of this module are responsible for additional support.
 
-### support:cloud-config
-This module shows an example of connecting to `Spring-Cloud-Config`
-
 ### support:logging
 This module supports logging of service and has a dependency added for distributed tracing support.
 
