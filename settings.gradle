@@ -16,3 +16,5 @@ include 'tests:api-docs'
 include 'support:logging'
 include 'support:monitoring'
 include 'clients:client-example'
+include 'common'
+
