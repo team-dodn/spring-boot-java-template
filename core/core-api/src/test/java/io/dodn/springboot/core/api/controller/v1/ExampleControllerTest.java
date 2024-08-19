@@ -15,8 +15,8 @@ import static org.springframework.restdocs.request.RequestDocumentation.pathPara
 import static org.springframework.restdocs.request.RequestDocumentation.queryParameters;
 
 import io.dodn.springboot.core.api.controller.v1.request.ExampleRequestDto;
-import io.dodn.springboot.core.api.domain.ExampleResult;
-import io.dodn.springboot.core.api.domain.ExampleService;
+import io.dodn.springboot.core.domain.ExampleResult;
+import io.dodn.springboot.core.domain.ExampleService;
 import io.dodn.springboot.test.api.RestDocsTest;
 import io.restassured.http.ContentType;
 

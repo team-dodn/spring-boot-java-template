@@ -1,4 +1,4 @@
-package io.dodn.springboot.core.api.domain;
+package io.dodn.springboot.core.domain;
 
 public record ExampleData(String value, String param) {
 }
