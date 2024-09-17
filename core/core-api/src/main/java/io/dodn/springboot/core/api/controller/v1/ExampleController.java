@@ -5,7 +5,7 @@ import io.dodn.springboot.core.api.controller.v1.response.ExampleResponseDto;
 import io.dodn.springboot.core.domain.ExampleData;
 import io.dodn.springboot.core.domain.ExampleResult;
 import io.dodn.springboot.core.domain.ExampleService;
-import io.dodn.springboot.core.api.support.response.ApiResponse;
+import io.dodn.springboot.core.support.response.ApiResponse;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

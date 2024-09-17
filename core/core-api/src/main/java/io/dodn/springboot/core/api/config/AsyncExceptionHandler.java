@@ -1,6 +1,6 @@
 package io.dodn.springboot.core.api.config;
 
-import io.dodn.springboot.core.api.support.error.CoreApiException;
+import io.dodn.springboot.core.support.error.CoreException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,11 +14,11 @@ public class AsyncExceptionHandler implements AsyncUncaughtExceptionHandler {
 
     @Override
     public void handleUncaughtException(Throwable e, Method method, Object... params) {
-        if (e instanceof CoreApiException) {
-            switch (((CoreApiException) e).getErrorType().getLogLevel()) {
-                case ERROR -> log.error("CoreApiException : {}", e.getMessage(), e);
-                case WARN -> log.warn("CoreApiException : {}", e.getMessage(), e);
-                default -> log.info("CoreApiException : {}", e.getMessage(), e);
+        if (e instanceof CoreException) {
+            switch (((CoreException) e).getErrorType().getLogLevel()) {
+                case ERROR -> log.error("CoreException : {}", e.getMessage(), e);
+                case WARN -> log.warn("CoreException : {}", e.getMessage(), e);
+                default -> log.info("CoreException : {}", e.getMessage(), e);
             }
         }
         else {

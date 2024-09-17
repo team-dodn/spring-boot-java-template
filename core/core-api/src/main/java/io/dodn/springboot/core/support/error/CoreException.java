@@ -1,18 +1,18 @@
-package io.dodn.springboot.core.api.support.error;
+package io.dodn.springboot.core.support.error;
 
-public class CoreApiException extends RuntimeException {
+public class CoreException extends RuntimeException {
 
     private final ErrorType errorType;
 
     private final Object data;
 
-    public CoreApiException(ErrorType errorType) {
+    public CoreException(ErrorType errorType) {
         super(errorType.getMessage());
         this.errorType = errorType;
         this.data = null;
     }
 
-    public CoreApiException(ErrorType errorType, Object data) {
+    public CoreException(ErrorType errorType, Object data) {
         super(errorType.getMessage());
         this.errorType = errorType;
         this.data = data;

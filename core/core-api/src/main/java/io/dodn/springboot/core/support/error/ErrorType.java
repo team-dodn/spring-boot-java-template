@@ -1,4 +1,4 @@
-package io.dodn.springboot.core.api.support.error;
+package io.dodn.springboot.core.support.error;
 
 import org.springframework.boot.logging.LogLevel;
 import org.springframework.http.HttpStatus;
