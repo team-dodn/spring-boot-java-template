@@ -38,9 +38,8 @@ spring:
   jpa:
     properties:
       hibernate:
-        show_log: true
         format_sql: true
-    show-sql: true
+        show_sql: true
 
 storage:
   datasource:
