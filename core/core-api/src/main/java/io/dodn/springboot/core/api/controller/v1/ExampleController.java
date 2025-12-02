@@ -1,6 +1,7 @@
 package io.dodn.springboot.core.api.controller.v1;
 
 import io.dodn.springboot.core.api.controller.v1.request.ExampleRequestDto;
+import io.dodn.springboot.core.api.controller.v1.response.ExampleItemResponseDto;
 import io.dodn.springboot.core.api.controller.v1.response.ExampleResponseDto;
 import io.dodn.springboot.core.domain.ExampleData;
 import io.dodn.springboot.core.domain.ExampleResult;
@@ -13,6 +14,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @RestController
 public class ExampleController {
@@ -27,13 +31,15 @@ public class ExampleController {
     public ApiResponse<ExampleResponseDto> exampleGet(@PathVariable String exampleValue,
             @RequestParam String exampleParam) {
         ExampleResult result = exampleExampleService.processExample(new ExampleData(exampleValue, exampleParam));
-        return ApiResponse.success(new ExampleResponseDto(result.data()));
+        return ApiResponse.success(new ExampleResponseDto(result.data(), LocalDate.now(), LocalDateTime.now(),
+                ExampleItemResponseDto.build()));
     }
 
     @PostMapping("/post")
     public ApiResponse<ExampleResponseDto> examplePost(@RequestBody ExampleRequestDto request) {
         ExampleResult result = exampleExampleService.processExample(request.toExampleData());
-        return ApiResponse.success(new ExampleResponseDto(result.data()));
+        return ApiResponse.success(new ExampleResponseDto(result.data(), LocalDate.now(), LocalDateTime.now(),
+                ExampleItemResponseDto.build()));
     }
 
 }

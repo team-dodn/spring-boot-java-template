@@ -11,7 +11,6 @@ apply from: 'lint.gradle'
 allprojects {
     group = "${projectGroup}"
     version = "${applicationVersion}"
-    sourceCompatibility = project.javaVersion
 
     repositories {
         mavenCentral()
@@ -31,7 +30,19 @@ subprojects {
     }
 
     dependencies {
-        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+        testImplementation 'org.springframework.boot:spring-boot-test'
+        testImplementation 'org.junit.jupiter:junit-jupiter-api'
+        testImplementation 'org.junit.jupiter:junit-jupiter-engine'
+        testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+        testImplementation 'org.assertj:assertj-core'
+        testImplementation 'org.mockito:mockito-core'
+    }
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(project.javaVersion)
+        }
     }
 
     bootJar.enabled = false
@@ -71,7 +82,7 @@ subprojects {
         }
     }
 
-    tasks.named('asciidoctor') {
+    tasks.named('asciidoctor').configure {
         dependsOn restDocsTest
     }
 }
