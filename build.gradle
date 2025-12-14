@@ -50,35 +50,51 @@ subprojects {
 
     test {
         useJUnitPlatform {
-            excludeTags('develop', 'restdocs')
+            excludeTags 'develop', 'restdocs'
         }
     }
 
-    tasks.register('unitTest', Test) {
-        group = 'verification'
-        useJUnitPlatform {
-            excludeTags('develop', 'context', 'restdocs')
-        }
-    }
+    testing {
+        suites {
+            test {
+                targets {
+                    unitTest {
+                        testTask.configure {
+                            group = 'verification'
+                            useJUnitPlatform {
+                                excludeTags 'develop', 'context', 'restdocs'
+                            }
+                        }
+                    }
 
-    tasks.register('contextTest', Test) {
-        group = 'verification'
-        useJUnitPlatform {
-            includeTags('context')
-        }
-    }
+                    contextTest {
+                        testTask.configure {
+                            group = 'verification'
+                            useJUnitPlatform {
+                                includeTags 'context'
+                            }
+                        }
+                    }
 
-    tasks.register('restDocsTest', Test) {
-        group = 'verification'
-        useJUnitPlatform {
-            includeTags('restdocs')
-        }
-    }
+                    restDocsTest {
+                        testTask.configure {
+                            group = 'verification'
+                            useJUnitPlatform {
+                                includeTags 'restdocs'
+                            }
+                        }
+                    }
 
-    tasks.register('developTest', Test) {
-        group = 'verification'
-        useJUnitPlatform {
-            includeTags('develop')
+                    developTest {
+                        testTask.configure {
+                            group = 'verification'
+                            useJUnitPlatform {
+                                includeTags 'develop'
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
