@@ -4,4 +4,5 @@ dependencies {
     implementation 'io.github.openfeign:feign-micrometer'
 
     testImplementation 'com.fasterxml.jackson.core:jackson-databind'
+    testImplementation 'org.springframework.boot:spring-boot-http-converter'
 }
