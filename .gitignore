@@ -3,6 +3,7 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**
 !**/src/test/**
+.kotlin
 
 ### IDEA ###
 .idea
@@ -10,3 +11,10 @@ build/
 *.iml
 *.ipr
 out/
+
+### Environment ###
+.worktrees/
+
+### Agents ###
+.claude/settings.local.json
+CLAUDE.local.md
