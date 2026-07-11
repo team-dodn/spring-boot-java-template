@@ -115,13 +115,6 @@ This is a good tag to use if you're not good at writing tests.
 
 # Recommended Preferences
 
-## Git Hook
-This setting makes run `lint` on every commit.
-
-```
-$ git config core.hookspath .githooks
-```
-
 ## IntelliJ IDEA
 This setting makes it easier to run the `test code` out of the box.
 
